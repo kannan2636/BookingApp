@@ -8,21 +8,21 @@ const LoginForm = () => {
     let formValid = true;
     const newErrors = { email: '', password: '' };
 
-    if (!formData.email) {
-      formValid = false;
-      newErrors.email = 'Email is required.';
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      formValid = false;
-      newErrors.email = 'Invalid email address.';
-    }
+      if (!formData.email) {
+        formValid = false;
+        newErrors.email = 'Email is required.';
+      } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+        formValid = false;
+        newErrors.email = 'Invalid email address.';
+      }
 
-    if (!formData.password) {
-      formValid = false;
-      newErrors.password = 'Password is required.';
-    } else if (formData.password.length < 6) {
-      formValid = false;
-      newErrors.password = 'Password must be at least 6 characters.';
-    }
+      if (!formData.password) {
+        formValid = false;
+        newErrors.password = 'Password is required.';
+      } else if (formData.password.length < 6) {
+        formValid = false;
+        newErrors.password = 'Password must be at least 6 characters.';
+      }
 
     setErrors(newErrors);
     return formValid;
