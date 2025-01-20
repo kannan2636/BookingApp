@@ -8,7 +8,8 @@ const LoginForm = () => {
     let formValid = true;
     const newErrors = { email: '', password: '' };
 
-      if (!formData.email) {
+      
+    if (!formData.email) {
         formValid = false;
         newErrors.email = 'Email is required.';
       } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
@@ -29,7 +30,7 @@ const LoginForm = () => {
   };
 
   // Test Service to be build
-  
+
   const handleSubmit = (event) => {
     event.preventDefault();
     if (validateForm()) {
